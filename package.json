@@ -10,7 +10,11 @@
     "cookie-parser": "~1.0.1",
     "debug": "~0.7.4",
     "express": "~4.2.0",
+    "express-session": "^1.7.6",
     "morgan": "~1.0.0",
-    "serve-favicon": "^2.0.1"
+    "passport": "^0.2.0",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "^2.0.1",
+    "swig": "^1.4.2"
   }
 }
