@@ -20,7 +20,7 @@ var DB = {
 passport.serializeUser(function (user, done) {
   console.log("serialize");
   console.log(user);
-  done(null, user.id);
+  return done(null, user.id);
 });
 
 passport.deserializeUser(function (id, done) {
@@ -30,10 +30,10 @@ passport.deserializeUser(function (id, done) {
   for (var i = 0; i < users.length; i++) {
     var userId = users[i].id;
     if(userId == id){
-      done(null, users[i]);
+      return done(null, users[i]);
     }
   }
-  done(new Error('Usuario no encontrado'));
+  return done(new Error('Usuario no encontrado'));
 });
 
 passport.use(new LocalStrategy(
